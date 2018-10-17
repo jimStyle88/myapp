@@ -5,6 +5,7 @@ import React, {Component} from 'react'
 //import cx from 'classnames'
 // 当前组件样式
 import styles from './test1.less'
+// 这里的css moudels 配置不成功，导致打印出来的 styles 为 {} ,读取不到类名 暂时找不到原因
 // 选项卡组件
 class Test1 extends Component{
   // 构造函数
@@ -33,7 +34,10 @@ class Test1 extends Component{
   // 渲染函数
   render(ReactElement, DOMElement, callback) {
     return (
-      <div className='name'>{this.state.name}</div>
+      <div className='name'>
+        {this.state.name}
+        <span className='text'>asdasdas</span>
+      </div>
     )
   }
 
