@@ -1,0 +1,74 @@
+@import '../../assets/basic.less';
+
+.tabContainer {
+  display: flex;
+}
+
+.tabListContainer {
+  flex: 1;
+  overflow: hidden;
+}
+
+.tabList {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.tabItems{
+  padding: 0 8px;
+  display: inline-block;
+  height: 47px;
+  line-height: 47px;
+  vertical-align: top;
+  border: 1px solid #e5e5e5;
+}
+.tabItems{
+  .title {
+    padding: 6px 10px 10px 10px;
+  }
+}
+
+.tabItems .link{
+  padding-top: 10px;
+  .fontColor_3;
+  .fontSize_4;
+}
+
+.active{
+  border-top: 2px #C83545 solid;
+  position: relative;
+  border-bottom: 1px #FFF solid;
+  &:after{
+    content: "";
+    width: 1px;
+    right: -2px;
+    background: #fff;
+    position: absolute;
+    height: 47px;
+    line-height: 47px;
+  }
+}
+
+li + li {
+  border-left: 0;
+}
+
+
+.active .link{
+  color: @uiColor_1;
+  position: relative;
+  text-decoration: none;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.fade {
+  display: none;
+}
+
+.fade.in {
+  display: block;
+}
